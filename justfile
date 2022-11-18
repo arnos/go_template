@@ -8,6 +8,7 @@ default:
 
 # git justfile
 
+
 # git save
 save JIRA="missing JIRA ticket #" message="yet another commit":
   @git add .
@@ -16,6 +17,10 @@ save JIRA="missing JIRA ticket #" message="yet another commit":
 # git push to remote repo
 push destination="origin":
   @git push -u {{destination}} 
+
+# git pull
+pull:
+  @git pull
 
 # golang justfile
 
