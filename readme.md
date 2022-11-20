@@ -1,4 +1,4 @@
-# Yet another Go(lang) template for microservices or cli (and using just)
+# Yet another Go(lang) template for microservices or cli (using just)
 
 ## Why Just
 
@@ -14,7 +14,7 @@ And now we can go on to the
 
 ##  The Goal
 
-The Goal is to make a simple template, inspired by clean Architecture and screaming Architecture.
+The Goal is to provide a simple template, inspired by clean Architecture and screaming Architecture.
 
 1. You shouldn't need to open file to get what they do.
 1. Files should have a standard format.   
@@ -39,7 +39,9 @@ The Goal is to make a simple template, inspired by clean Architecture and scream
 
 With the above file name format I submit that we are using screaming architecture
 
-Clean Architecture is about seperating your core entities (interfaces) and logic from the messy implementations and I submit that using the purpose in the file names provides the seperation.
+Clean Architecture is about seperating your core entities (interfaces) and logic from the messy implementations 
+
+I submit that using the purpose in the file names provides the seperation.
 
 ## The Journey
 
@@ -53,6 +55,6 @@ I'm fairly certain that this template will withstand time again, and hopefully i
 
 ## Notes
 
-I did explore going one degree further by abstracting the main intake using [watermill](https://watermill.io/) so that I could abstract the different lambda main call (we are working between GCP and Azure) and/or be able to re-design a given binary by compiling sub-components together. 
+I did explore going one degree further by abstracting the main intake using [watermill](https://watermill.io/) so that I could abstract the different main calls (we work on GCP/Azure functions while running cli tools and using pipelines to schedule job runs) and/or be able to re-design a given binary by compiling sub-components together (with watermill the components would communicate over go channels by default). 
 
-But as with just felt it had the right balance, I felt that changing this didn't belong here in the template but rather as an implementation example. 
+But as with just felt it had the right balance, I felt it didn't belong in the template. 
