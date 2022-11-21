@@ -24,13 +24,15 @@ The Goal is to provide a simple template, inspired by clean Architecture and scr
     >
     > In the golang context I define purposes as:
     > * _main (where everything starts and ends)
+    > * _config (where we setup everything).
     > * _logic (how everything works)
     > * _interfaces (how to abstract implementation from the logic) 
     > * _implementation (where everything happens)
     > * _test (because it inspired the template).
 1. Having the above purposes allows one to quickly find the proper file for the piece of code 
 1. Then comes the domain, use a domain that draws the attention of what your code is doing
-    > I.E. the file domain should tell what the code in it is doing take api and you will have the following
+    > I.E. the file domain should tell what the code in it is doing take api and you could (not all domains need all purposes) have the following
+    > * api_config.go
     > * api_logic.go
     > * api_interfaces.go
     > * api_implementation.go
