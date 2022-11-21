@@ -17,27 +17,27 @@ And now we can go on to the
 The Goal is to provide a simple template, inspired by clean Architecture and screaming Architecture.
 
 1. You shouldn't need to open file to get what they do.
-1. Files should have a standard format.   
+2. Files should have a standard format.   
     > as such I propose the following standard:  
     > 
     > [domain]_[purpose].[language extension]
     >
     > In the golang context I define purposes as:
-    > * _main (where everything starts and ends)
-    > * _config (where we setup everything).
-    > * _logic (how everything works)
-    > * _interfaces (how to abstract implementation from the logic) 
-    > * _implementation (where everything happens)
-    > * _test (because it inspired the template).
-1. Having the above purposes allows one to quickly find the proper file for the piece of code 
-1. Then comes the domain, use a domain that draws the attention of what your code is doing
+    > - _main (where everything starts and ends)
+    > - _config (where we setup everything).
+    > - _logic (how everything works)
+    > - _interfaces (how to abstract implementation from the logic) 
+    > - _implementation (where everything happens)
+    > - _test (because it inspired the template).
+3. Having the above purposes allows one to quickly find the proper file for the piece of code 
+4. Then comes the domain, use a domain that draws the attention of what your code is doing
     > I.E. the file domain should tell what the code in it is doing take api and you could (not all domains need all purposes) have the following
-    > * api_config.go
-    > * api_logic.go
-    > * api_interfaces.go
-    > * api_implementation.go
-    > * api_test.go
-1. The domains should be micro-domains and only be used when needed to seperate code into smaller more managable junks.
+    > - api_config.go
+    > - api_logic.go
+    > - api_interfaces.go
+    > - api_implementation.go
+    > - api_test.go
+5. The domains should be micro-domains and only be used when needed to seperate code into smaller more managable junks.
 
 With the above file name format I submit that we are using screaming architecture
 
